@@ -71,7 +71,7 @@ export default function Hero() {
               <span className="block text-gray-800 mt-2">Men's, Ladies & Youth Teams</span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-6 text-red-200 font-[var(--font-oswald)]">
+            <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-red-200 font-[var(--font-oswald)]">
               {slides[current].title}
             </h2>
 

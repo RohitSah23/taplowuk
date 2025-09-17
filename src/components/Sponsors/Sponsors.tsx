@@ -27,13 +27,13 @@ export default function Sponsors() {
           SPONSORS
         </h2>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {sponsors.map((sponsors) => (
             <div
               key={sponsors.logo}
               className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
             >
-              <div className="w-24 h-24 relative mb-4">
+              <div className="w-16 h-20 relative mb-4">
                 <Image
                   src={sponsors.logo}
                   alt={sponsors.logo}

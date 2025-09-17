@@ -22,11 +22,11 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed top-4 w-full flex justify-center z-50 px-4 sm:px-6 lg:px-8"
+      className="absolute top-4 w-full flex justify-center z-50"
     >
       {/* Navbar container */}
       <div className="relative w-full max-w-7xl">
-        <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-white/20 shadow-lg">
+        <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
           {/* Logo */}
           <Link
             href="/"

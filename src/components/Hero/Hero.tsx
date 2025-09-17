@@ -13,10 +13,7 @@ export default function Hero() {
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="space-y-12 animate-fade-in py-20 sm:py-28 md:py-32">
           <div className="space-y-6">
-            <div className="inline-flex items-center px-4 py-2 bg-red-50 text-red-600 rounded-full text-xs sm:text-sm font-semibold mb-4">
-              <MapPin className="h-4 w-4 mr-2" />
-              Branch Out Consultancy:
-            </div>
+       
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="block text-transparent bg-clip-text bg-gradient-to-r py-2 from-red-600 via-red-400 to-white">

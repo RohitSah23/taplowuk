@@ -20,11 +20,10 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Teams', href: '#teams' },
+    { name: 'Fixtures', href: '#fixtures' },
     { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -36,22 +35,17 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3 group">
-            <Image src={Logo} alt="Branch Out Consultancy" width={50} height={50} />
+            <Image src={Logo} alt="Capital Logo Name" width={50} height={50} />
             <div className="hidden sm:block">
               <span className={`font-bold text-xl transition-colors duration-300 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}>
-                Taplow 
+                Taplow United
               </span>
-              <div className={`text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-red-600' : 'text-red-400'
-              }`}>
-                United
-              </div>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -67,16 +61,6 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              Get Started
-            </Link>
-          </div>
-
-  
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-all cursor-pointer duration-300 ${
@@ -85,7 +69,7 @@ export default function Header() {
                 : 'text-white hover:bg-white/10'
             }`}
           >
-            {isMobileMenuOpen ? <X size={24} className='cursor-pointer' /> : <Menu size={24} className='cursor-pointer'  />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -102,15 +86,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-red-100">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full font-semibold"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
           </div>
         )}

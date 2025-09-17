@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import JoinCoachesSection from "@/components/JoinCoaches/JoinCoaches";
 import LeaguesSection from "@/components/League/League";
+import Sponsors from "@/components/Sponsors/Sponsors";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <About/>
     <JoinCoachesSection/>
     <LeaguesSection/>
+    <Sponsors/>
     </div>
   );
 }

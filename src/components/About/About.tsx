@@ -1,95 +1,58 @@
-'use client';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { History, ArrowRight } from 'lucide-react';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
-import Logo from '../../app/assets/Logo.webp';
-
-export default function About() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navItems = [
-    { name: 'Teams', href: '#teams' },
-    { name: 'Fixtures', href: '#fixtures' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact Us', href: '/contact' },
-  ];
-
+export default function AboutSection() {
   return (
-    <header className={`  w-full z-40 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-lg shadow-2xl border-b border-red-100' 
-        : 'bg-transparent'
-    }`}>
+    <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center space-x-3 group">
-            <Image src={Logo} alt="Capital Logo Name" width={50} height={50} />
-            <div className="hidden sm:block">
-              <span className={`font-bold text-xl uppercase transition-colors duration-300 ${
-                isScrolled ? 'text-black' : 'text-white'
-              }`}>
-                Taplow United
-              </span>
-            </div>
-          </Link>
-
-          <nav className="hidden lg:flex items-center space-x-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 hover:scale-105 ${
-                  isScrolled 
-                    ? 'text-black hover:bg-red-50 hover:text-red-600' 
-                    : 'text-white hover:bg-white/10 hover:text-red-300'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-all cursor-pointer duration-300 ${
-              isScrolled 
-                ? 'text-black hover:bg-red-50' 
-                : 'text-white hover:bg-white/10'
-            }`}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-red-800 mb-6">About Us</h2>
+          <p className="text-xl text-red-600">Welcome to Taplow United FC</p>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-red-100 backdrop-blur-lg">
-            <div className="px-4 py-6 space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-black font-semibold hover:bg-red-50 hover:text-red-600 rounded-lg transition-all duration-300"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="bg-red-100 p-3 rounded-xl">
+                <History className="h-8 w-8 text-red-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-red-800">Our Heritage</h3>
             </div>
+            
+            <p className="text-lg text-red-700 leading-relaxed">
+              Taplow United formerly, the Old Paludians Association, was formed in 1923 by former pupils 
+              of Slough Secondary School - re-named Slough Grammar School in 1936. Mr. E. Rutland-Clarke, 
+              headmaster of the school in 1923 and founder member of the Club, helped in the naming of the association.
+            </p>
+            
+            <p className="text-lg text-red-700 leading-relaxed">
+              The name derived from the Latin word "PALUS" meaning marsh, bog or slough. For over 100 years, 
+              we have been a cornerstone of the local football community, fostering talent and building 
+              lasting friendships through the beautiful game.
+            </p>
+            
+            <Button className="bg-red-600 hover:bg-red-700 text-white">
+              Read More
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Button>
           </div>
-        )}
+
+          {/* Card Image */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-gradient-to-br from-red-100 to-red-200 relative">
+              <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg')] bg-cover bg-center opacity-80"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <h4 className="text-2xl font-bold mb-2">Stanley Jones Field</h4>
+                <p className="text-lg">Our home since 1923</p>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
-    </header>
+    </section>
   );
 }

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Globe, Linkedin, Twitter, Facebook } from 'lucide-react';
 import Image from 'next/image';
-import Logo from '../../app/assets/Logo.png'; // Replace with your Taplow United logo
+import Logo from '../../app/assets/Logo.webp'; // Replace with your Taplow United logo
 
 const quickLinks = [
   { name: 'Home', href: '/' },

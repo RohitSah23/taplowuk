@@ -26,14 +26,14 @@ export default function Header() {
     >
       {/* Navbar container with responsive padding */}
       <div className="relative w-full max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
-        <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
+        <div className="flex items-center justify-between px-4 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
           {/* Logo */}
           <Link
             href="/"
             className="flex items-center space-x-3 hover:scale-101 transition-all duration-300"
           >
             <Image src={Logo} alt="Taplow United FC" width={50} height={50} />
-            <span className="text-xl font-bold text-white uppercase">
+            <span className="text-sm sm:text-xl font-bold text-white uppercase">
               Taplow United FC
             </span>
           </Link>

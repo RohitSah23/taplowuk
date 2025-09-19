@@ -24,8 +24,8 @@ export default function Header() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="absolute top-4 w-full flex justify-center z-50"
     >
-      {/* Navbar container */}
-      <div className="relative w-full max-w-7xl px-6">
+      {/* Navbar container with responsive padding */}
+      <div className="relative w-full max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
         <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
           {/* Logo */}
           <Link
@@ -38,7 +38,7 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 ml-auto">
             {navItems.map((item) => (
               <motion.div key={item.name} whileHover={{ scale: 1.1 }}>
@@ -65,7 +65,7 @@ export default function Header() {
             </motion.div>
           </nav>
 
-          {/* Mobile Toggle */}
+          {/* Mobile Toggle Button */}
           <button
             className="lg:hidden ml-auto text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -82,7 +82,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="absolute top-full left-1/2 -translate-x-1/2 w-full sm:w-[90%] bg-white/20 backdrop-blur-xl shadow-lg rounded-xl py-4 flex flex-col items-center space-y-4 border border-white/20 mt-2 z-50"
+              className="absolute top-full left-1/2 -translate-x-1/2 w-[92%] sm:w-[90%] md:w-[80%] px-4 bg-white/20 backdrop-blur-xl shadow-lg rounded-xl py-4 flex flex-col items-center space-y-4 border border-white/20 mt-2 z-50"
             >
               {navItems.map((item) => (
                 <Link

@@ -52,7 +52,7 @@ export default function Hero() {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-between">
+    <section className="relative w-full pt-24 md:pt-0 min-h-screen flex flex-col items-center justify-between">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"

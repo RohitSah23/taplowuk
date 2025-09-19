@@ -25,7 +25,7 @@ export default function Header() {
       className="absolute top-4 w-full flex justify-center z-50"
     >
       {/* Navbar container */}
-      <div className="relative w-full max-w-7xl">
+      <div className="relative w-full max-w-7xl ">
         <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
           {/* Logo */}
           <Link

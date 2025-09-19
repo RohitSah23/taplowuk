@@ -68,7 +68,7 @@ export default function Hero() {
           <div className="w-full md:w-1/2 text-black">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="block font-[var(--font-oswald)] text-red-200">Join Taplow United FC</span>
-              <span className="block text-gray-800 mt-2">Men's, Ladies & Youth Teams</span>
+              <span className="block text-gray-800 mt-2">Men&apos;s, Ladies & Youth Teams</span>
             </h1>
 
             <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-red-200 font-[var(--font-oswald)]">
@@ -129,20 +129,20 @@ export default function Hero() {
           </div>
         </div>
       </div>
-{/* Dots */}
-<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      onClick={() => setCurrent(index)}
-      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-        index === current ? 'bg-red-600 scale-110' : 'bg-gray-300 hover:bg-gray-400'
-      }`}
-      aria-label={`Go to slide ${index + 1}`}
-    />
-  ))}
-</div>
 
+      {/* Dots */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === current ? 'bg-red-600 scale-110' : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </section>
   );
 }

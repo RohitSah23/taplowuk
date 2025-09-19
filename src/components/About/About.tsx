@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { History, ArrowRight } from 'lucide-react';
 
@@ -29,7 +29,7 @@ export default function AboutSection() {
             </p>
             
             <p className="text-lg text-red-700 leading-relaxed">
-              The name derived from the Latin word "PALUS" meaning marsh, bog or slough. For over 100 years, 
+              The name derived from the Latin word &quot;PALUS&quot; meaning marsh, bog or slough. For over 100 years, 
               we have been a cornerstone of the local football community, fostering talent and building 
               lasting friendships through the beautiful game.
             </p>

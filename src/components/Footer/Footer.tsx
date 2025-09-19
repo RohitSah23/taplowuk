@@ -7,7 +7,7 @@ import Logo from '../../app/assets/Logo.webp'; // Replace with your Taplow Unite
 
 const quickLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
+  { name: 'About Us', href: '#about' },
   { name: 'Teams', href: '/teams' },
   { name: 'Fixtures', href: '/fixtures' },
   { name: 'Join Us', href: '/join' },
@@ -39,31 +39,22 @@ export default function Footer() {
         <div className="py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Logo & Intro */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image src={Logo} alt="Taplow United FC" width={50} height={50} />
-              <div>
-                <span className="font-bold text-xl text-white">Taplow United</span>
-                <div className="text-red-400 text-sm font-medium">Football Club</div>
-              </div>
-            </Link>
+         <Link
+            href="/"
+            className="flex items-center space-x-3 transition-all duration-300"
+          >
+            <Image src={Logo} alt="Taplow United FC" width={50} height={50} />
+            <span className="text-xl font-bold text-white uppercase">
+              Taplow United FC
+            </span>
+          </Link>
 
             <p className="text-gray-300 leading-relaxed">
               Founded in 1923, Taplow United FC has been at the heart of community football for over a century,
               inspiring generations of players and fans.
             </p>
 
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-6 rounded overflow-hidden shadow-md">
-                <Image
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_the_United_Kingdom.svg"
-                  alt="UK Flag"
-                  width={32}
-                  height={24}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="text-gray-400 text-sm">Proudly representing Taplow, UK</span>
-            </div>
+   
           </div>
 
           {/* Quick Links */}
@@ -96,25 +87,11 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-red-400 flex-shrink-0" />
-                <Link href="tel:+441628000000" className="text-gray-300 hover:text-red-400 text-sm">
-                  +44 1628 000000
-                </Link>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-red-400 flex-shrink-0" />
-                <Link href="mailto:info@taplowunitedfc.co.uk" className="text-gray-300 hover:text-red-400 text-sm">
-                  info@taplowunitedfc.co.uk
-                </Link>
-              </div>
-
+           
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-red-400 flex-shrink-0" />
-                <Link href="https://taplowunitedfc.co.uk" className="text-gray-300 hover:text-red-400 text-sm">
-                  taplowunitedfc.co.uk
-                </Link>
+                <Link href="https://www.taplow-utd.co.uk/" className="text-gray-300 hover:text-red-400 text-sm">
+https://www.taplow-utd.co.uk/                </Link>
               </div>
             </div>
           </div>
@@ -134,34 +111,16 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className="text-gray-400 text-sm">
-              <div className="font-semibold mb-2">Clubhouse Hours:</div>
-              <div>Mon - Fri: 5:00 PM - 9:00 PM</div>
-              <div>Saturday: 9:00 AM - 6:00 PM</div>
-              <div>Sunday: Match Days</div>
-            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 px-6 py-6 text-gray-400 text-sm">
+        <div className="border-t border-white/10 px-6 py-6 rounded-xl text-gray-400 text-sm">
           <div className="text-center flex flex-col items-center space-y-2">
-            Taplow United Football Club · Established 1923 · Community Football in Buckinghamshire.
+            <div>© Taplow United FC 1923-2025. All rights reserved.</div>
           </div>
 
-          <div className="my-4 border-t border-white/10"></div>
-
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div>© 2025 Taplow United FC. All rights reserved.</div>
-            <div className="flex items-center space-x-6">
-              <Link href="/privacy" className="hover:text-red-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="hover:text-red-400 transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
+         
         </div>
       </div>
     </footer>

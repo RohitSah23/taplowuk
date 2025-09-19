@@ -25,12 +25,12 @@ export default function Header() {
       className="absolute top-4 w-full flex justify-center z-50"
     >
       {/* Navbar container */}
-      <div className="relative w-full max-w-7xl ">
+      <div className="relative w-full max-w-7xl px-6">
         <div className="flex items-center justify-between px-6 py-3 rounded-2xl border border-white/20 backdrop-blur-xl bg-[#8E0007]/80 shadow-lg">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-3 hover:scale-105 transition-all duration-300"
+            className="flex items-center space-x-3 hover:scale-101 transition-all duration-300"
           >
             <Image src={Logo} alt="Taplow United FC" width={50} height={50} />
             <span className="text-xl font-bold text-white uppercase">

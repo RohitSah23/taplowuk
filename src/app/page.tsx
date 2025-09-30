@@ -5,7 +5,6 @@ import Hero from "@/components/Hero/Hero";
 import JoinCoachesSection from "@/components/JoinCoaches/JoinCoaches";
 import LeaguesSection from "@/components/League/League";
 import Sponsors from "@/components/Sponsors/Sponsors";
-import Image from "next/image";
 
 export default function Home() {
   return (

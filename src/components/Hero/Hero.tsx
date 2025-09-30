@@ -60,15 +60,15 @@ export default function Hero() {
           {/* Left */}
           <div className="w-full md:w-1/2 text-black">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="block font-[var(--font-oswald)] text-indigo-400">Join Taplow United FC</span>
-              <span className="block text-white mt-2">Men&apos;s, Ladies & Youth Teams</span>
+              <span className="block font-[var(--font-oswald)] text-yellow-500">Join Taplow United FC</span>
+              <span className="block text-[#E2DDB4] mt-2">Men&apos;s, Ladies & Youth Teams</span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-white font-[var(--font-oswald)]">
+            <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-yellow-500 font-[var(--font-oswald)]">
               {slides[current].title}
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 font-medium mb-8 whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl text-[#E2DDB4] font-medium mb-8 whitespace-pre-line">
               {slides[current].desc}
             </p>
 
@@ -79,8 +79,8 @@ export default function Hero() {
                   href={btn.href}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 text-center ${
                     btn.style === 'primary'
-                      ? 'bg-indigo-500/80 hover:bg-indigo-600 text-white'
-                      : 'border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white'
+                      ? 'bg-yellow-500/80 hover:bg-yellow-600 text-white'
+                      : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white'
                   }`}
                 >
                   {btn.label}
@@ -106,14 +106,14 @@ export default function Hero() {
               {/* Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-indigo-600 rounded-full p-2 shadow-md"
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-yellow-600 rounded-full p-2 shadow-md"
                 aria-label="Previous slide"
               >
                 &#8592;
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-indigo-600 rounded-full p-2 shadow-md"
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-yellow-600 rounded-full p-2 shadow-md"
                 aria-label="Next slide"
               >
                 &#8594;
@@ -130,7 +130,7 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === current ? 'bg-indigo-500 scale-110' : 'bg-gray-500 hover:bg-gray-400'
+              index === current ? 'bg-yellow-500 scale-110' : 'bg-gray-500 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

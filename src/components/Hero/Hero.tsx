@@ -52,30 +52,23 @@ export default function Hero() {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full pt-28 md:pt-0 min-h-screen flex flex-col items-center justify-between py-10">
-      {/* Background */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'radial-gradient(75% 75% at 50% 90%, #fff 40%, #8E0007 100%)',
-        }}
-      />
+    <section className="relative w-full pt-28 md:pt-0 min-h-screen flex flex-col items-center justify-between py-10 bg-gradient-to-br from-[#8E0007] via-[#4B0000] to-[#000]">
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_35%,rgba(59,130,246,0.1)_35%,rgba(59,130,246,0.1)_65%,transparent_65%),linear-gradient(-45deg,transparent_35%,rgba(30,64,175,0.1)_35%,rgba(30,64,175,0.1)_65%,transparent_65%)] bg-[length:20px_20px] opacity-30 z-0" />
 
-      {/* Content */}
       <div className="flex-1 flex items-center w-full">
         <div className="max-w-7xl mx-auto w-full px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16 z-10">
           {/* Left */}
           <div className="w-full md:w-1/2 text-black">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="block font-[var(--font-oswald)] text-red-200">Join Taplow United FC</span>
-              <span className="block text-gray-800 mt-2">Men&apos;s, Ladies & Youth Teams</span>
+              <span className="block font-[var(--font-oswald)] text-indigo-400">Join Taplow United FC</span>
+              <span className="block text-white mt-2">Men&apos;s, Ladies & Youth Teams</span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-red-200 font-[var(--font-oswald)]">
+            <h2 className="text-2xl md:text-3xl leading-tight mb-6 text-white font-[var(--font-oswald)]">
               {slides[current].title}
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-medium mb-8 whitespace-pre-line">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 font-medium mb-8 whitespace-pre-line">
               {slides[current].desc}
             </p>
 
@@ -86,8 +79,8 @@ export default function Hero() {
                   href={btn.href}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 text-center ${
                     btn.style === 'primary'
-                      ? 'bg-red-600/70 hover:bg-red-700 text-white'
-                      : 'border-2 border-red-600/70 text-red-600 hover:bg-red-600 hover:text-white'
+                      ? 'bg-indigo-500/80 hover:bg-indigo-600 text-white'
+                      : 'border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white'
                   }`}
                 >
                   {btn.label}
@@ -98,7 +91,7 @@ export default function Hero() {
 
           {/* Right */}
           <div className="w-full md:w-1/2 relative flex justify-center items-center">
-            <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl h-64 sm:h-80 md:h-96 lg:h-[400px] rounded-xl shadow-lg overflow-hidden">
+            <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl h-64 sm:h-80 md:h-96 lg:h-[400px] rounded-xl shadow-xl overflow-hidden">
               {slides.map((slide, index) => (
                 <Image
                   key={slide.id}
@@ -113,14 +106,14 @@ export default function Hero() {
               {/* Arrows */}
               <button
                 onClick={prevSlide}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-red-700 rounded-full p-2 shadow-md"
+                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-indigo-600 rounded-full p-2 shadow-md"
                 aria-label="Previous slide"
               >
                 &#8592;
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-red-700 rounded-full p-2 shadow-md"
+                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-indigo-600 rounded-full p-2 shadow-md"
                 aria-label="Next slide"
               >
                 &#8594;
@@ -137,7 +130,7 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === current ? 'bg-red-600 scale-110' : 'bg-gray-300 hover:bg-gray-400'
+              index === current ? 'bg-indigo-500 scale-110' : 'bg-gray-500 hover:bg-gray-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

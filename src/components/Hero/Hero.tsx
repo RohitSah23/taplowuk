@@ -79,8 +79,8 @@ export default function Hero() {
                   href={btn.href}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 text-center ${
                     btn.style === 'primary'
-                      ? 'bg-yellow-500/80 hover:bg-yellow-600 text-white'
-                      : 'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white'
+                    ? 'bg-yellow-400/80 hover:bg-yellow-600 text-white'
+                      : 'border-2 border-yellow-400 text-yellow-500 hover:bg-yellow-400 hover:text-white'
                   }`}
                 >
                   {btn.label}
@@ -103,21 +103,7 @@ export default function Hero() {
                   }`}
                 />
               ))}
-              {/* Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-yellow-600 rounded-full p-2 shadow-md"
-                aria-label="Previous slide"
-              >
-                &#8592;
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-yellow-600 rounded-full p-2 shadow-md"
-                aria-label="Next slide"
-              >
-                &#8594;
-              </button>
+         
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans, Oswald } from "next/font/google";
-import "./globals.css";
 
 // Body font
 const nunitoSans = Nunito_Sans({
